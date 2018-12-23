@@ -15,17 +15,16 @@ class TestCasesArragneMatters: XCTestCase {
         counter += 1
         XCTAssertEqual(counter, 1)
     }
-    
+
     func testAC() {
-         print("log>\(#function)")
+        print("log>\(#function)")
         counter += 1
         XCTAssertEqual(counter, 2)
     }
-    
+
     func testAD() {
-         print("log>\(#function)")
+        print("log>\(#function)")
         counter += 1
         XCTAssertEqual(counter, 3)
     }
-    
 }

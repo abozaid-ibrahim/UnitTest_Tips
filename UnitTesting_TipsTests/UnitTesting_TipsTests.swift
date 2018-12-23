@@ -9,10 +9,7 @@
 import XCTest
 
 class UnitTesting_TipsTests: XCTestCase {
-
     func testExample() {
 //        let user  = User()
     }
-
-
 }

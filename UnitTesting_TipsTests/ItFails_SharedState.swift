@@ -8,24 +8,22 @@
 
 import XCTest
 
-
-class HomePrinter{
+class HomePrinter {
     var printerPaperCount = 0
-    func print(){
+    func print() {
         printerPaperCount += 1
     }
 }
+
 class ItFails_SharedState: XCTestCase {
-    
     let printer = HomePrinter()
     func testPapersCount() {
         printer.print()
         XCTAssertEqual(printer.printerPaperCount, 1)
     }
-    
+
     func testPerformanceExample() {
         printer.print()
         XCTAssertEqual(printer.printerPaperCount, 2)
     }
-    
 }

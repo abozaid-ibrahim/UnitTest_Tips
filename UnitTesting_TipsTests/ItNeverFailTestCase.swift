@@ -6,12 +6,12 @@
 //  Copyright © 2018 abuzeid. All rights reserved.
 //
 
-import XCTest
 @testable import UnitTesting_Tips
-class VideoService{
-    func videos(forUserID:Int,_ videos:@escaping ([Video])->Void){
-        DispatchQueue.global().asyncAfter(deadline:.now() + 2.0,execute: {[weak self] in
-            if self == nil {return}
+import XCTest
+class VideoService {
+    func videos(forUserID _: Int, _ videos: @escaping ([Video]) -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2.0, execute: { [weak self] in
+            if self == nil { return }
             videos([Video(id: 1, title: "John"),
                     Video(id: 2, title: "ali"),
                     Video(id: 3, title: "Mohamed")])
@@ -20,7 +20,6 @@ class VideoService{
 }
 
 class ItNeverFailTestCase: XCTestCase {
-   
     let service = VideoService()
     func testSuccessfulVideoRequestReturnsVideos() {
         service.videos(forUserID: 1) { videos in
@@ -29,8 +28,6 @@ class ItNeverFailTestCase: XCTestCase {
         }
     }
 }
-
-
 
 /**
  Xcode moves on from the test without waiting for it to return.

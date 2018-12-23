@@ -6,37 +6,34 @@
 //  Copyright © 2018 abuzeid. All rights reserved.
 //
 
-import XCTest
 @testable import UnitTesting_Tips
-
+import XCTest
 
 private class UsersRepository {
     private let users: [User]
-    
+
     init(usersService: UsersServiceProtocol) {
-        self.users = usersService.fetchUsers()
+        users = usersService.fetchUsers()
     }
-    
+
     func usersCountMessage() -> String {
         return "Number of users in the system: \(users.count)"
     }
 }
 
 class TestUsersCountWithStubs: XCTestCase {
-
     func test_Init() {
         let stubUsersService = StubUsersService()
         _ = UsersRepository(usersService: stubUsersService)
         XCTAssertTrue(stubUsersService.isFetchUsersCalled)
     }
-    
+
     class StubUsersService: UsersServiceProtocol {
         var isFetchUsersCalled = false
-        
+
         func fetchUsers() -> [User] {
             isFetchUsersCalled = true
             return []
         }
     }
-    
 }

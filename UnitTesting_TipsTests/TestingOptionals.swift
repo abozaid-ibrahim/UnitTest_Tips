@@ -7,12 +7,12 @@
 //
 
 import XCTest
-struct Student{
-    var id:Int?
-    let name:String?
+struct Student {
+    var id: Int?
+    let name: String?
 }
+
 class TestingOptionals: XCTestCase {
-    
     var studentsQueue = [Student]()
 
     func testUserName() {

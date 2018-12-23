@@ -1,4 +1,5 @@
 //
+@testable import UnitTesting_Tips
 //  TestAreaWithDummyPrinter.swift
 //  UnitTesting_TipsTests
 //
@@ -6,8 +7,6 @@
 //  Copyright © 2018 abuzeid. All rights reserved.
 //
 import XCTest
-@testable import UnitTesting_Tips
-
 
 class TestAreaWithDummyPrinter: XCTestCase {
     func test_Area() {
@@ -15,9 +14,8 @@ class TestAreaWithDummyPrinter: XCTestCase {
         square.side = 5
         XCTAssertEqual(square.area, 25)
     }
-    
+
     private final class DummySaver: SaverProtocol {
-        func save(value: Float) { }
+        func save(value _: Float) {}
     }
-    
 }
