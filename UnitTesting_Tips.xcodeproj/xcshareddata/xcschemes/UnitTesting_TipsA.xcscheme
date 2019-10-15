@@ -30,6 +30,16 @@
                </Test>
             </SkippedTests>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6C5BDBBF21D501230042AE12"
+               BuildableName = "UnitTesting_TipsUITests.xctest"
+               BlueprintName = "UnitTesting_TipsUITests"
+               ReferencedContainer = "container:UnitTesting_Tips.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <AdditionalOptions>
       </AdditionalOptions>
